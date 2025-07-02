@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --cor-primaria: #E8833A;         
+  --cor-secundaria: #C3CFD9;       
+  --cor-terciaria: #8DD7CF;        
+  --cor-indisponivel: #F7c52b;     
+  --cor-fundo: #FFFFFF;
+  --cor-footer-borda: #9EADBA;         
+  --cor-texto: #293845;
+  --cor-sucesso: #247A6B;          
+
+  --fonte-principal: 'Roboto', sans-serif;
+}
+
+*{
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto);
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

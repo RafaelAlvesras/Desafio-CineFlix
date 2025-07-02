@@ -1,0 +1,134 @@
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.sessao-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  height: 75vh;
+  gap: 24px;
+}
+
+.assentos-container {
+  display: flex;
+  height: 250px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+  padding: 16px;
+}
+
+.sessao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  max-width: 370px;
+}
+
+.assentos {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.disponivel {
+  background-color: #C3CFD9;
+  border-color: #7B8B99;
+}
+
+.selecionado {
+  background-color: #1AAE9E;
+  border-color: #0E7D71;
+}
+
+.indisponivel {
+  background-color: #FBE192;
+  border-color: #F7C52B;
+  cursor: not-allowed;
+}
+
+.exemplos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+.exemplos-descricao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95%;
+  gap: 16px;
+  margin-top: 24px;
+  font-size: 18px;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+form input{
+  display: flex;
+  
+  width: 327px;
+  height: 51px;
+
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+}
+
+form input::placeholder {
+  padding: 8px;
+  color: #afafaf;
+  font-size: 18px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 225px;
+  height: 43px;
+  background-color: var(--cor-primaria);
+  color: white;
+
+  border-radius: 3px;
+  border: none;
+
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 24px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

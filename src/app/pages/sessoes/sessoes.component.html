@@ -1,1 +1,25 @@
-<p>sessoes works!</p>
+<div class="sessoes-container" *ngIf="filme">
+
+  <h2>Selecione o horário</h2>
+
+  <div class="sessoes">
+
+    <div *ngFor="let dia of filme.days" class="sessao-container">
+      <h3>{{ dia.weekday }} - {{ dia.date }}</h3>
+      <div class="horarios-container">
+        <button *ngFor="let sessao of dia.showtimes" (click)="irParaAssentos(sessao.id)">
+          {{ sessao.name }}
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <div class="poster-container">
+      <img [src]="filme.posterURL" alt="{{filme.title}}" width="50" />
+    </div>
+    <div class="info">
+      <p>{{ filme.title }}</p>
+    </div>
+  </footer>
+</div>

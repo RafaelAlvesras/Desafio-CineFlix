@@ -1,1 +1,16 @@
-<p>sucesso works!</p>
+<h2>Pedido feito com sucesso!</h2>
+
+<div *ngIf="pedido">
+  <h3>Filme e sessão</h3>
+  <p>{{pedido.filme}}</p>
+  <p>{{pedido.data}} - {{pedido.horario}}</p>
+
+  <h3>Ingressos</h3>
+  <p *ngFor="let assento of pedido.assentos">Assento {{assento}}</p>
+
+  <h3>Comprador</h3>
+  <p>Nome: {{pedido.nome}}</p>
+  <p>CPF: {{pedido.cpf}}</p>
+
+  <button (click)="voltarHome()">Voltar pra Home</button>
+</div>

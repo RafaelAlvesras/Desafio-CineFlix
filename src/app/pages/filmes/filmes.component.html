@@ -1,1 +1,9 @@
-<p>filmes works!</p>
+<div class="home-container">
+  <h2>Selecione o filme</h2>
+
+  <div class="filmes-container">
+    <div class="filme" *ngFor="let filme of filmes" (click)="irParaSessoes(filme.id)">
+      <img [src]="filme.posterURL" [alt]="filme.title" />
+    </div>
+  </div>
+</div>
