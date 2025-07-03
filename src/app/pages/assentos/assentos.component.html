@@ -29,19 +29,24 @@
     <form (ngSubmit)="reservar()">
         <div>
             <label for="nome">Nome do comprador:</label>
-            <input id="nome" name="nome" type="text" [(ngModel)]="nome" required placeholder="Digite seu nome..."/>
+            <input id="nome" name="nome" type="text" [(ngModel)]="nome" required placeholder="Digite seu nome..." />
         </div>
 
         <div>
             <label for="cpf">CPF do comprador:</label>
-            <input id="cpf" name="cpf" type="text" [(ngModel)]="cpf" required  placeholder="Digite seu CPF..."/>
+            <input id="cpf" name="cpf" type="text" [(ngModel)]="cpf" required placeholder="Digite seu CPF..." />
         </div>
 
         <button type="submit">Reservar assento(s)</button>
     </form>
 
     <footer>
-        <img [src]="sessao.movie.posterURL" alt="{{sessao.movie.title}}" width="50" />
-        <p>{{sessao.movie.title}} - {{sessao.name}} ({{sessao.day.weekday}})</p>
+        <div class="poster-container">
+            <img [src]="sessao.movie.posterURL" alt="{{sessao.movie.title}}" width="50" />
+        </div>
+        <div class="info" > 
+            <p>{{sessao.movie.title}}</p> 
+            <p>{{sessao.day.weekday}} - {{sessao.name}}</p>
+        </div>
     </footer>
 </div>

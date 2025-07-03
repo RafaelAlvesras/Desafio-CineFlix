@@ -1,4 +1,6 @@
-<header >
-  <!-- <p (click)="voltarParaHome()">V</p> -->
+<header>
+  <div class="div-back">
+    <span *ngIf="!isHome && !isSuccess" class="material-icons" (click)="voltar()">arrow_back</span>
+  </div>
   CINEFLEX
 </header>

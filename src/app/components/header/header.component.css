@@ -13,3 +13,18 @@ header {
   font-weight: 400;
   font-family: var(--fonte-principal);
 }
+
+.material-icons {
+  width: 24px;
+  height: 24px;
+  color: var(--cor-primaria);
+}
+
+.div-back{
+  position: absolute;
+  top: 24px;
+  left:16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

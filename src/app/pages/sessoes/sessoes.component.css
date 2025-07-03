@@ -60,7 +60,7 @@ button {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 99%;
@@ -94,7 +94,8 @@ img {
 }
 
 .info {
-  font-size: 18px;
+  font-size: 26px;
+  font-weight: 400;
   color: var(--cor-texto);
   display: flex;
   flex-direction: column;

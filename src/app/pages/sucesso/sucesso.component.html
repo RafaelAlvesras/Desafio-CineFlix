@@ -1,16 +1,24 @@
-<h2>Pedido feito com sucesso!</h2>
+<div class="sucesso-container" *ngIf="pedido">
+  <h2 class="sucesso-title">Pedido feito com sucesso!</h2>
 
-<div *ngIf="pedido">
-  <h3>Filme e sessão</h3>
-  <p>{{pedido.filme}}</p>
-  <p>{{pedido.data}} - {{pedido.horario}}</p>
+  <div class="info-sucesso">
+    <div class="sucesso-div">
+      <h3>Filme e sessão</h3>
+      <p>{{pedido.filme}}</p>
+      <p>{{pedido.data}} - {{pedido.horario}}</p>
+    </div>
 
-  <h3>Ingressos</h3>
-  <p *ngFor="let assento of pedido.assentos">Assento {{assento}}</p>
+    <div class="sucesso-div">
+      <h3>Ingressos</h3>
+      <p *ngFor="let assento of pedido.assentos">Assento {{assento}}</p>
+    </div>
 
-  <h3>Comprador</h3>
-  <p>Nome: {{pedido.nome}}</p>
-  <p>CPF: {{pedido.cpf}}</p>
+    <div class="sucesso-div">
+      <h3>Comprador</h3>
+      <p>Nome: {{pedido.nome}}</p>
+      <p>CPF: {{pedido.cpf}}</p>
+    </div>
+  </div>
 
   <button (click)="voltarHome()">Voltar pra Home</button>
 </div>

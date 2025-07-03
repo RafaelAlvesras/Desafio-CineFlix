@@ -1,18 +1,32 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
+import { CommonModule, Location } from '@angular/common';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
-  constructor( private router: Router) { }
+export class HeaderComponent implements OnInit{
+  isHome: boolean = true;
+  isSuccess: boolean = true;
+  
+  constructor(private router: Router, private location: Location) { }
 
-  voltarParaHome() {
-    this.router.navigate(['/']);
+  ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      this.isHome = event.url === '/';
+      this.isSuccess = event.url === '/sucesso';
+    });
+  }
+
+  voltar() {
+    this.location.back();
   }
 
 }
