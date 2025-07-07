@@ -42,11 +42,11 @@
 
     <footer>
         <div class="poster-container">
-            <img [src]="sessao.movie.posterURL" alt="{{sessao.movie.title}}" width="50" />
+            <img [src]="sessao?.movie?.posterURL" alt="{{sessao?.movie?.title}}" width="50" />
         </div>
         <div class="info" > 
-            <p>{{sessao.movie.title}}</p> 
-            <p>{{sessao.day.weekday}} - {{sessao.name}}</p>
+            <p>{{sessao?.movie?.title}}</p> 
+            <p>{{sessao?.day?.weekday}} - {{sessao?.name}}</p>
         </div>
     </footer>
 </div>

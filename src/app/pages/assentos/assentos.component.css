@@ -17,7 +17,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 250px;
+  height: 230px;
   flex-wrap: wrap;
   gap: 8px;
   width: 100%;
@@ -85,7 +85,7 @@ form {
   align-items: center;
   justify-content: flex-start;
   width: 95%;
-  gap: 16px;
+  gap: 8px;
   margin-top: 24px;
   font-size: 18px;
 }
@@ -100,8 +100,8 @@ form div {
 form input {
   display: flex;
 
-  width: 327px;
-  height: 51px;
+  width: 300px;
+  height: 41px;
 
   border: 1px solid #d4d4d4;
   border-radius: 3px;

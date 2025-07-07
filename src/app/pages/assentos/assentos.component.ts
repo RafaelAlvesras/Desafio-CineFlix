@@ -73,13 +73,14 @@ export class AssentosComponent implements OnInit {
       body, { responseType: 'text' })
     this.router.navigate(['/sucesso'], {
       state: {
-        filme: this.sessao.movie.title,
+        filme: this.sessao?.movie?.title,
         data: this.sessao.day.date,
         horario: this.sessao.name,
-        assentos: this.selectedSeats.map(seat => seat.name),
+        assentos: this.selectedSeats?.map(seat => seat.name),
         nome: this.nome,
         cpf: this.cpf
       }
     });
+
   }
 }
